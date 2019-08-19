@@ -13,11 +13,15 @@ public class GildedRose {
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
-            itemQualityDuel(items[i]);
+            if(items[i].name.equals("Aged Brie")){
+                items[i].getItemStrategyModel().updateQuality(items[i]);
+            }else{
+                itemQualityDuel(items[i]);
 
-            itemSellInDuel(items[i]);
+                itemSellInDuel(items[i]);
 
-            itemQualityDuelBySellIn(items[i]);
+                itemQualityDuelBySellIn(items[i]);
+            }
         }
     }
 
