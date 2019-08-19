@@ -11,9 +11,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by KingsWong on 2019/8/19.
- */
 public class GildedRoseTest {
 
     @Test
@@ -39,7 +36,7 @@ public class GildedRoseTest {
         Item items[] = new Item[]{new Item("Backstage passes to a TAFKAL80ETC concert", 1, 1)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
-        assertEquals(3,gildedRose.getItems()[0].quality);
+        assertEquals(4,gildedRose.getItems()[0].quality);
 
     }
 
