@@ -2,6 +2,7 @@ package gildedRose.item;
 
 import gildedRose.entity.AgedBrie;
 import gildedRose.entity.BackstagePasses;
+import gildedRose.entity.Other;
 import gildedRose.entity.Sulfuras;
 
 /**
@@ -17,7 +18,8 @@ public class ItemStrategyFactory {
                 return new Sulfuras();
             case "Backstage passes to a TAFKAL80ETC concert":
                 return new BackstagePasses();
+            default:
+                return new Other();
         }
-        return null;
     }
 }
