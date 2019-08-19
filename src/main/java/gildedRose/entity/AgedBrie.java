@@ -10,16 +10,16 @@ public class AgedBrie implements ItemStrategyModel{
 
     @Override
     public void updateQuality(Item item) {
-        UpdateItemQualityWhenSmallerThanFifty(item);
+        updateItemQualityWhenSmallerThanFifty(item);
 
         item.setSellIn(item.getSellIn() - 1);
 
         if (item.getSellIn() < 0) {
-            UpdateItemQualityWhenSmallerThanFifty(item);
+            updateItemQualityWhenSmallerThanFifty(item);
         }
     }
 
-    public void UpdateItemQualityWhenSmallerThanFifty(Item item) {
+    public void updateItemQualityWhenSmallerThanFifty(Item item) {
         if (item.getQuality() < 50) {
             item.setQuality(item.getQuality() + 1);
         }
