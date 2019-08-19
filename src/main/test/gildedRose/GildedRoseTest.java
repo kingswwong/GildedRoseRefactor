@@ -78,4 +78,13 @@ public class GildedRoseTest {
         assertEquals(0,gildedRose.getItems()[0].quality);
 
     }
+
+    @Test
+    public void should_item_quality_be_2_when_given_item_name_Aged_Brie_and_quality_1_and_and_sellIn_minux_1() throws Exception {
+        Item items[] = new Item[]{new Item("Aged Brie", -1, 1)};
+        GildedRose gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+        assertEquals(3,gildedRose.getItems()[0].quality);
+
+    }
 }
