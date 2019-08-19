@@ -25,11 +25,7 @@ public class GildedRose {
         if (item.sellIn < 0) {
             if (!item.name.equals("Aged Brie")) {
                 if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                    if (item.quality > 0) {
-                        if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                            item.quality--;
-                        }
-                    }
+                    duelQualityWhenBiggerThanZero(item);
                 } else {
                     item.quality = 0;
                 }
@@ -37,6 +33,14 @@ public class GildedRose {
                 if (item.quality < 50) {
                     item.quality++;
                 }
+            }
+        }
+    }
+
+    public void duelQualityWhenBiggerThanZero(Item item) {
+        if (item.quality > 0) {
+            if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
+                item.quality--;
             }
         }
     }
@@ -49,11 +53,7 @@ public class GildedRose {
 
     public void itemQualityDuel(Item item) {
         if (isEqualsSpecifiedName(item)) {
-            if (item.quality > 0) {
-                if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                    item.quality--;
-                }
-            }
+            duelQualityWhenBiggerThanZero(item);
         } else {
             if (item.quality < 50) {
                 item.quality++;
