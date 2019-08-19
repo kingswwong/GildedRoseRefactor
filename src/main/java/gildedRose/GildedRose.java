@@ -6,6 +6,11 @@ public class GildedRose {
         this.items = items;
     }
 
+    public Item[] getItems() {
+        return items;
+    }
+
+
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (isEqualsSpecifiedName(items[i])) {
